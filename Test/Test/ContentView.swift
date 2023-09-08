@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var pexelVideos: PexelVideos?
     @StateObject var viewModel = VideosViewModel()
     var body: some View {
         VStack(spacing: 20) {
@@ -24,21 +23,24 @@ struct ContentView: View {
             }.frame(width: 120, height: 120)
 
             
-            Text(pexelVideos?.videos?.first?.user?.name ?? "no name")
+            Text("no name")
                 .bold()
                 .font(.title3)
             Text("This is a test")
                 .padding()
             Spacer()
+            
+            List {
+                ForEach(viewModel.pexelVideos ?? []) { video in
+                    Text(video.userName ?? "NO name")
+                }
+            }
+            
         }
         .padding()
         .task {
-            let test = APIManager()
-            pexelVideos = try? await test.doRequest(endPoint: "https://api.pexels.com/videos/popular?per_page=3")
-            
+          await viewModel.getVideos()
         }
-       
-        
     }
 }
 

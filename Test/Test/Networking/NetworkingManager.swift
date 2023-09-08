@@ -70,7 +70,12 @@ class VideosViewModel: ObservableObject {
     @Published var pexelVideos: [Video]?
     
     func getVideos() async  {
-       pexelVideos = await repository.getVideos()
+        
+            let pexelV = await repository.getVideos()
+        await MainActor.run(body: {
+            self.pexelVideos = pexelV
+        })
+        
     }
 }
 
