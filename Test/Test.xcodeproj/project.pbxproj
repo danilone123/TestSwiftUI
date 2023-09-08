@@ -14,6 +14,7 @@
 		305C11D52AAAC31C00169D83 /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C11D42AAAC31C00169D83 /* TestTests.swift */; };
 		305C11DF2AAAC31C00169D83 /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C11DE2AAAC31C00169D83 /* TestUITests.swift */; };
 		305C11E12AAAC31C00169D83 /* TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C11E02AAAC31C00169D83 /* TestUITestsLaunchTests.swift */; };
+		305C11EE2AAAE00000169D83 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C11ED2AAAE00000169D83 /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		305C11DA2AAAC31C00169D83 /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		305C11DE2AAAC31C00169D83 /* TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITests.swift; sourceTree = "<group>"; };
 		305C11E02AAAC31C00169D83 /* TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		305C11ED2AAAE00000169D83 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				305C11C52AAAC31900169D83 /* ContentView.swift */,
 				305C11C72AAAC31C00169D83 /* Assets.xcassets */,
 				305C11C92AAAC31C00169D83 /* Preview Content */,
+				305C11ED2AAAE00000169D83 /* NetworkingManager.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				305C11EE2AAAE00000169D83 /* NetworkingManager.swift in Sources */,
 				305C11C62AAAC31900169D83 /* ContentView.swift in Sources */,
 				305C11C42AAAC31900169D83 /* TestApp.swift in Sources */,
 			);
