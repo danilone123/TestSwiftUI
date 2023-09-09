@@ -68,14 +68,14 @@ class PexelRepository: RepositoryProtocol {
 class VideosViewModel: ObservableObject {
     private let repository = PexelRepository()
     @Published var pexelVideos: [Video]?
+    @Published var isLoading = false
     
-    func getVideos() async  {
-        
-            let pexelV = await repository.getVideos()
-        await MainActor.run(body: {
-            self.pexelVideos = pexelV
-        })
-        
+    //using MainActor in order to be able to update ui on the main thread
+    @MainActor func getVideos() async  {
+        self.isLoading = true
+        let pexelV = await repository.getVideos()
+        self.isLoading = false
+        self.pexelVideos = pexelV
     }
 }
 

@@ -8,7 +8,6 @@
 import CoreData
 
 class CoreDataManager {
-    // Responsible for preparing a model
     private let container = NSPersistentContainer(name: "PexelVideoModel")
     private var savedEntities: [Video] = []
     
@@ -49,13 +48,11 @@ class CoreDataManager {
             video.height = pexelVideo.height ?? 0
             video.width = pexelVideo.width ?? 0
             video.url = pexelVideo.url?.absoluteString
-            video.duration = pexelVideo.duration ?? 0
+            video.duration = Int32(pexelVideo.duration ?? 0)
             video.userID = Int32(pexelVideo.user?.id ?? 0)
             video.userName = pexelVideo.user?.name
             video.userURL = pexelVideo.user?.url?.absoluteString
             try? save()
         })
-
-        
     }
 }
