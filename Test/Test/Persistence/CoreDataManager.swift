@@ -52,6 +52,8 @@ class CoreDataManager {
             video.userID = Int32(pexelVideo.user?.id ?? 0)
             video.userName = pexelVideo.user?.name
             video.userURL = pexelVideo.user?.url?.absoluteString
+            video.link =  pexelVideo.videoFiles.first?.link?.absoluteString
+            video.quality = pexelVideo.videoFiles.first?.quality
             try? save()
         })
     }

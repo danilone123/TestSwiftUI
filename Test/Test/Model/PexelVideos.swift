@@ -15,6 +15,7 @@ struct VideoResponse: Decodable {
     let image: String?
     let duration: Int?
     let user: PexelUser?
+    let videoFiles: [VideoFile]
 }
 
 struct PexelVideos: Decodable {
@@ -25,4 +26,9 @@ struct PexelUser: Decodable {
     let id: Int
     let name: String?
     let url: URL?
+}
+
+struct VideoFile: Decodable {
+    let link: URL?
+    let quality: String?
 }

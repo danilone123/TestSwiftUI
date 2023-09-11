@@ -22,6 +22,8 @@
 		308987EF2AACC9BB00FF0D5E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987EE2AACC9BB00FF0D5E /* LoadingView.swift */; };
 		308987F12AACD4BF00FF0D5E /* VideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987F02AACD4BF00FF0D5E /* VideosViewModel.swift */; };
 		308987F32AACDB2900FF0D5E /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987F22AACDB2900FF0D5E /* VideoDetailView.swift */; };
+		308987F82AAFD7D600FF0D5E /* PexelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987F72AAFD7D600FF0D5E /* PexelRepository.swift */; };
+		308987FB2AAFD9AC00FF0D5E /* PError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987FA2AAFD9AC00FF0D5E /* PError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		308987EE2AACC9BB00FF0D5E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		308987F02AACD4BF00FF0D5E /* VideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewModel.swift; sourceTree = "<group>"; };
 		308987F22AACDB2900FF0D5E /* VideoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailView.swift; sourceTree = "<group>"; };
+		308987F72AAFD7D600FF0D5E /* PexelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelRepository.swift; sourceTree = "<group>"; };
+		308987FA2AAFD9AC00FF0D5E /* PError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 		305C11C22AAAC31900169D83 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				308987F92AAFD99E00FF0D5E /* Common */,
 				308987ED2AACC99200FF0D5E /* Views */,
 				305C11FB2AABED0600169D83 /* Persistence */,
 				305C11F82AABE6B900169D83 /* Cells */,
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				305C11ED2AAAE00000169D83 /* NetworkingManager.swift */,
+				308987F72AAFD7D600FF0D5E /* PexelRepository.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -189,6 +195,14 @@
 				308987F22AACDB2900FF0D5E /* VideoDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		308987F92AAFD99E00FF0D5E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				308987FA2AAFD9AC00FF0D5E /* PError.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,12 +337,14 @@
 			files = (
 				305C11FA2AABE6DA00169D83 /* VideoCellView.swift in Sources */,
 				305C11F12AAB683800169D83 /* PexelVideos.swift in Sources */,
+				308987F82AAFD7D600FF0D5E /* PexelRepository.swift in Sources */,
 				305C11EE2AAAE00000169D83 /* NetworkingManager.swift in Sources */,
 				305C11C62AAAC31900169D83 /* VideosListView.swift in Sources */,
 				305C11F32AAB724000169D83 /* CoreDataManager.swift in Sources */,
 				308987F12AACD4BF00FF0D5E /* VideosViewModel.swift in Sources */,
 				308987EF2AACC9BB00FF0D5E /* LoadingView.swift in Sources */,
 				305C11F62AAB740A00169D83 /* PexelVideoModel.xcdatamodeld in Sources */,
+				308987FB2AAFD9AC00FF0D5E /* PError.swift in Sources */,
 				305C11C42AAAC31900169D83 /* TestApp.swift in Sources */,
 				308987F32AACDB2900FF0D5E /* VideoDetailView.swift in Sources */,
 			);

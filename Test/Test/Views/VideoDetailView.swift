@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct VideoDetailView: View {
     let video: Video
@@ -13,26 +14,28 @@ struct VideoDetailView: View {
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: video.image ?? "")) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-
-            } placeholder: {
+            //if the video is not available show an image
+            if let urlText = video.link, let url = URL(string: urlText) {
+                VideoPlayer(player: AVPlayer(url: url))
+                    .frame(height: 380)
+            } else {
+                AsyncImage(url: URL(string: video.image ?? "")) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 380)
+                } placeholder: {
                     Rectangle()
                         .foregroundColor(.secondary)
+                        .frame(height: 380)
+                }
             }
-            .frame(width: 320)
-
             
             VStack {
-                Text("Chicken wings")
+                Text("by \(video.userName ?? "")")
                     .font(.title2)
                     .fontWeight(.semibold)
-                Text("You will need more money to buy this dsds ")
-                    .multilineTextAlignment(.center)
-                    .font(.body)
-                    .padding()
+                    .foregroundColor(.white)
                 
                 Spacer()
                 
@@ -41,38 +44,25 @@ struct VideoDetailView: View {
                         Text("Duration")
                             .bold()
                             .font(.caption)
-                        Text("700")
-                            .foregroundColor(.secondary)
+                        Text(String("\(video.duration) sec"))
                             .fontWeight(.semibold)
                             .italic()
-                    }
+                    }.foregroundColor(.white)
                     
                     VStack(spacing: 5) {
-                        Text("Width")
+                        Text("Quality")
                             .bold()
                             .font(.caption)
-                        Text("700")
-                            .foregroundColor(.secondary)
+                        Text(video.quality ?? "")
                             .fontWeight(.semibold)
                             .italic()
-                    }
-                    
-                    VStack(spacing: 5) {
-                        Text("Height")
-                            .bold()
-                            .font(.caption)
-                        Text("700")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
+                    }.foregroundColor(.white)
                 }
                 .padding(.bottom, 20)
-            }            
+            }
         }
-        .frame(width: 320, height: 450)
-        .background(Color(.systemBackground))
+        .frame(width: 320, height: 500)
+        .background(Color(.black))
         .cornerRadius(12)
         .shadow(radius: 40)
         .overlay(Button {
@@ -82,7 +72,7 @@ struct VideoDetailView: View {
                 Circle()
                     .frame(width: 30, height: 30)
                     .foregroundColor(.white)
-                    .opacity(0.6)
+                    .opacity(0.2)
                 
                 Image(systemName: "xmark")
                     .imageScale(.medium)
