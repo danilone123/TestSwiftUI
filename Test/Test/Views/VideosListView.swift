@@ -9,18 +9,31 @@ import SwiftUI
 
 struct VideosListView: View {
     @StateObject var viewModel = VideosViewModel()
+    @State private var isShowingDetail = false
+    @State private var selectedVideo: Video?
+    
     var body: some View {
         ZStack {
             NavigationView {
                 List(viewModel.pexelVideos ?? []) { video in
                     VideoCellView(video: video)
+                        .onTapGesture {
+                            isShowingDetail = true
+                            selectedVideo = video
+                        }
                 }
                 .navigationTitle("Most Popular Videos ")
+                .disabled(isShowingDetail)
             }
             .onAppear {
                 Task {
                     await viewModel.getVideos()
                 }
+            }
+            .blur(radius: isShowingDetail ? 20 : 0)
+            
+            if isShowingDetail, let selectedVideo {
+                VideoDetailView(video: selectedVideo, isShowingDetail: $isShowingDetail)
             }
             
             if viewModel.isLoading {
@@ -29,34 +42,6 @@ struct VideosListView: View {
         }
     }
 }
-/*
- NavigationView {
-     List(videos, id: \.id) { video in
-         NavigationLink(
-         destination: VideoDetailView(video: video), label: {
-             HStack {
-                 Image(video.imageName)
-                     .resizable()
-                     .scaledToFit()
-                     .frame(height: 70)
-                     .cornerRadius(4)
-                     .padding(.vertical, 4)
-                  VStack(alignment: .leading, spacing: 5) {
-                     Text(video.title)
-                         .fontWeight(.semibold)
-                         .lineLimit(2)
-                         .minimumScaleFactor(0.5)
-                     
-                     Text(video.uploadDate)
-                         .font(.subheadline)
-                         .foregroundColor(.secondary)
-                 }
-             }
-         })
-     }
-     .navigationTitle("TOP 10")
- }
- */
 
 struct VideosListView_Previews: PreviewProvider {
     static var previews: some View {

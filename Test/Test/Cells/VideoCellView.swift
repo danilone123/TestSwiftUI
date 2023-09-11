@@ -8,30 +8,30 @@
 import SwiftUI
 
 struct VideoCellView: View {
-    let video: Video
-    var body: some View {
-        HStack {
-            AsyncImage(url: URL(string: video.image ?? "")) { image in
-                           image
-                               .resizable()
-                               .aspectRatio(contentMode: .fit)
-                               .cornerRadius(8)
-                       } placeholder: {
-                           Rectangle()
-                                .foregroundColor(.secondary)
-                       }.frame(width: 100, height: 80)
-             VStack(alignment: .leading, spacing: 5) {
-                Text(video.userName ?? "")
-                    .fontWeight(.semibold)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.5)
-                
-                 Text("duration time: \(video.duration) sec")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-             }.padding(.leading)
-        }
+let video: Video
+var body: some View {
+    HStack {
+        AsyncImage(url: URL(string: video.image ?? "")) { image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(8)
+        } placeholder: {
+            Rectangle()
+                .foregroundColor(.secondary)
+        }.frame(width: 90, height: 70)
+         VStack(alignment: .leading, spacing: 5) {
+            Text(video.userName ?? "")
+                .fontWeight(.semibold)
+                .lineLimit(2)
+                .minimumScaleFactor(0.5)
+            
+             Text("duration time: \(video.duration) sec")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+         }.padding(.leading)
     }
+}
 }
 
 struct VideoCellView_Previews: PreviewProvider {

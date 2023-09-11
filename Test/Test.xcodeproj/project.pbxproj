@@ -20,6 +20,8 @@
 		305C11F62AAB740A00169D83 /* PexelVideoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 305C11F42AAB740A00169D83 /* PexelVideoModel.xcdatamodeld */; };
 		305C11FA2AABE6DA00169D83 /* VideoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C11F92AABE6DA00169D83 /* VideoCellView.swift */; };
 		308987EF2AACC9BB00FF0D5E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987EE2AACC9BB00FF0D5E /* LoadingView.swift */; };
+		308987F12AACD4BF00FF0D5E /* VideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987F02AACD4BF00FF0D5E /* VideosViewModel.swift */; };
+		308987F32AACDB2900FF0D5E /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987F22AACDB2900FF0D5E /* VideoDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		305C11F52AAB740A00169D83 /* PexelVideoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PexelVideoModel.xcdatamodel; sourceTree = "<group>"; };
 		305C11F92AABE6DA00169D83 /* VideoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCellView.swift; sourceTree = "<group>"; };
 		308987EE2AACC9BB00FF0D5E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		308987F02AACD4BF00FF0D5E /* VideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewModel.swift; sourceTree = "<group>"; };
+		308987F22AACDB2900FF0D5E /* VideoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 		305C11EF2AAB682700169D83 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				308987F02AACD4BF00FF0D5E /* VideosViewModel.swift */,
 				305C11F02AAB683800169D83 /* PexelVideos.swift */,
 			);
 			path = Model;
@@ -181,6 +186,7 @@
 			children = (
 				305C11C52AAAC31900169D83 /* VideosListView.swift */,
 				308987EE2AACC9BB00FF0D5E /* LoadingView.swift */,
+				308987F22AACDB2900FF0D5E /* VideoDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,9 +326,11 @@
 				305C11EE2AAAE00000169D83 /* NetworkingManager.swift in Sources */,
 				305C11C62AAAC31900169D83 /* VideosListView.swift in Sources */,
 				305C11F32AAB724000169D83 /* CoreDataManager.swift in Sources */,
+				308987F12AACD4BF00FF0D5E /* VideosViewModel.swift in Sources */,
 				308987EF2AACC9BB00FF0D5E /* LoadingView.swift in Sources */,
 				305C11F62AAB740A00169D83 /* PexelVideoModel.xcdatamodeld in Sources */,
 				305C11C42AAAC31900169D83 /* TestApp.swift in Sources */,
+				308987F32AACDB2900FF0D5E /* VideoDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
