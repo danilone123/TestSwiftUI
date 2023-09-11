@@ -14,13 +14,17 @@ var body: some View {
         AsyncImage(url: URL(string: video.image ?? "")) { image in
             image
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(8)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 80, height: 100)
+                .cornerRadius(16)
         } placeholder: {
             Rectangle()
+                .frame(width: 80, height: 100)
                 .foregroundColor(.secondary)
-        }.frame(width: 90, height: 70)
-         VStack(alignment: .leading, spacing: 5) {
+                .cornerRadius(16)
+        }
+        
+        VStack(alignment: .leading, spacing: 5) {
             Text(video.userName ?? "")
                 .fontWeight(.semibold)
                 .lineLimit(2)
@@ -29,7 +33,8 @@ var body: some View {
              Text("duration time: \(video.duration) sec")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
-         }.padding(.leading)
+         }
+        .padding(.leading)
     }
 }
 }
