@@ -16,7 +16,7 @@ class VideosViewModel: ObservableObject {
         DispatchQueue.main.async {
             self.isLoading = true
         }
-        sleep(8)
+
         let pexelV = await repository.getVideos()
         
         DispatchQueue.main.async {

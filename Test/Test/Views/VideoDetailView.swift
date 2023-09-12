@@ -41,23 +41,8 @@ struct VideoDetailView: View {
                 Spacer()
                 
                 HStack(spacing: 40) {
-                    VStack(spacing: 5) {
-                        Text("Duration")
-                            .bold()
-                            .font(.caption)
-                        Text(String("\(video.duration) sec"))
-                            .fontWeight(.semibold)
-                            .italic()
-                    }.foregroundColor(.white)
-                    
-                    VStack(spacing: 5) {
-                        Text("Quality")
-                            .bold()
-                            .font(.caption)
-                        Text(video.quality ?? "")
-                            .fontWeight(.semibold)
-                            .italic()
-                    }.foregroundColor(.white)
+                    InfoView(title: "Duration", value: "\(video.duration) sec")
+                    InfoView(title: "Quality", value: video.quality ?? "")
                 }
                 .padding(.bottom, 20)
             }
@@ -69,16 +54,7 @@ struct VideoDetailView: View {
         .overlay(Button {
             isShowingDetail = false
         } label: {
-            ZStack {
-                Circle()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.white)
-                    .opacity(0.2)
-                
-                Image(systemName: "xmark")
-                    .imageScale(.medium)
-                    .frame(width: 44, height: 44)
-            }
+            DismissButtonView()
         }, alignment: .topTrailing)
     }
 }
@@ -86,5 +62,21 @@ struct VideoDetailView: View {
 struct VideoDetailView_Previews: PreviewProvider {
     static var previews: some View {
         VideoDetailView(video: Video(), isShowingDetail: .constant(true))
+    }
+}
+
+struct InfoView: View {
+    let title: String
+    let value: String
+    
+    var body: some View {
+        VStack(spacing: 5) {
+            Text(title)
+                .bold()
+                .font(.caption)
+            Text(String(value))
+                .fontWeight(.semibold)
+                .italic()
+        }.foregroundColor(.white)
     }
 }

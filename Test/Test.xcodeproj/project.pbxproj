@@ -25,6 +25,7 @@
 		308987F82AAFD7D600FF0D5E /* PexelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987F72AAFD7D600FF0D5E /* PexelRepository.swift */; };
 		308987FB2AAFD9AC00FF0D5E /* PError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987FA2AAFD9AC00FF0D5E /* PError.swift */; };
 		308987FD2AB0C5DE00FF0D5E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987FC2AB0C5DE00FF0D5E /* NetworkMonitor.swift */; };
+		308987FF2AB0EEF300FF0D5E /* DismissButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987FE2AB0EEF300FF0D5E /* DismissButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		308987F72AAFD7D600FF0D5E /* PexelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelRepository.swift; sourceTree = "<group>"; };
 		308987FA2AAFD9AC00FF0D5E /* PError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PError.swift; sourceTree = "<group>"; };
 		308987FC2AB0C5DE00FF0D5E /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		308987FE2AB0EEF300FF0D5E /* DismissButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				305C11C52AAAC31900169D83 /* VideosListView.swift */,
 				308987EE2AACC9BB00FF0D5E /* LoadingView.swift */,
 				308987F22AACDB2900FF0D5E /* VideoDetailView.swift */,
+				308987FE2AB0EEF300FF0D5E /* DismissButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308987FF2AB0EEF300FF0D5E /* DismissButtonView.swift in Sources */,
 				308987FD2AB0C5DE00FF0D5E /* NetworkMonitor.swift in Sources */,
 				305C11FA2AABE6DA00169D83 /* VideoCellView.swift in Sources */,
 				305C11F12AAB683800169D83 /* PexelVideos.swift in Sources */,
