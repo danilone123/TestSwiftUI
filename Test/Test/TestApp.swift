@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TestApp: App {
+    @StateObject var networkMonitor = NetworkMonitor()
+    
     var body: some Scene {
         WindowGroup {
             VideosListView()
+                .environmentObject(networkMonitor)
         }
     }
 }

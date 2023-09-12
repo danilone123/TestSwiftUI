@@ -11,6 +11,8 @@ struct VideosListView: View {
     @StateObject var viewModel = VideosViewModel()
     @State private var isShowingDetail = false
     @State private var selectedVideo: Video?
+    @EnvironmentObject var networkMonitor: NetworkMonitor
+    @State private var showNetworkAlert = false
     
     var body: some View {
         ZStack {
@@ -22,14 +24,21 @@ struct VideosListView: View {
                             selectedVideo = video
                         }
                 }
-                .navigationTitle("Most Popular Videos ")
+                .navigationTitle("Most Popular Videos")
                 .disabled(isShowingDetail)
             }
             .onAppear {
-                Task {
-                    await viewModel.getVideos()
-                }
+                startTask()
             }
+            .onChange(of: networkMonitor.isConnected, perform: { connectionStatus in
+                showNetworkAlert = !connectionStatus
+                if connectionStatus {
+                    startTask()
+                }
+            })
+            .popover(isPresented: $showNetworkAlert, content: {
+                Text("Error with your internet connection")
+            })
             .blur(radius: isShowingDetail ? 20 : 0)
             
             if isShowingDetail, let selectedVideo {
@@ -43,8 +52,16 @@ struct VideosListView: View {
     }
 }
 
+extension VideosListView {
+    func startTask() {
+        Task {
+            await viewModel.getVideos()
+        }
+    }
+}
+
 struct VideosListView_Previews: PreviewProvider {
     static var previews: some View {
-        VideosListView()
+        VideosListView().environmentObject(NetworkMonitor())
     }
 }

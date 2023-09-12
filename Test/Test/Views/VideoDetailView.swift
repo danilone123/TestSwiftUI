@@ -11,6 +11,7 @@ import AVKit
 struct VideoDetailView: View {
     let video: Video
     @Binding var isShowingDetail: Bool
+    @EnvironmentObject var networkMonitor: NetworkMonitor
     
     var body: some View {
         VStack {
@@ -32,10 +33,10 @@ struct VideoDetailView: View {
             }
             
             VStack {
-                Text("by \(video.userName ?? "")")
+                Text(networkMonitor.isConnected ?  "by \(video.userName ?? "")" : "NOT CONNECTED")
                     .font(.title2)
                     .fontWeight(.semibold)
-                    .foregroundColor(.white)
+                    .foregroundColor(networkMonitor.isConnected ? .white : .red)
                 
                 Spacer()
                 

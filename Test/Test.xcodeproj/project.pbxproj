@@ -24,6 +24,7 @@
 		308987F32AACDB2900FF0D5E /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987F22AACDB2900FF0D5E /* VideoDetailView.swift */; };
 		308987F82AAFD7D600FF0D5E /* PexelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987F72AAFD7D600FF0D5E /* PexelRepository.swift */; };
 		308987FB2AAFD9AC00FF0D5E /* PError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987FA2AAFD9AC00FF0D5E /* PError.swift */; };
+		308987FD2AB0C5DE00FF0D5E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987FC2AB0C5DE00FF0D5E /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		308987F22AACDB2900FF0D5E /* VideoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailView.swift; sourceTree = "<group>"; };
 		308987F72AAFD7D600FF0D5E /* PexelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelRepository.swift; sourceTree = "<group>"; };
 		308987FA2AAFD9AC00FF0D5E /* PError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PError.swift; sourceTree = "<group>"; };
+		308987FC2AB0C5DE00FF0D5E /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				305C11ED2AAAE00000169D83 /* NetworkingManager.swift */,
 				308987F72AAFD7D600FF0D5E /* PexelRepository.swift */,
+				308987FC2AB0C5DE00FF0D5E /* NetworkMonitor.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308987FD2AB0C5DE00FF0D5E /* NetworkMonitor.swift in Sources */,
 				305C11FA2AABE6DA00169D83 /* VideoCellView.swift in Sources */,
 				305C11F12AAB683800169D83 /* PexelVideos.swift in Sources */,
 				308987F82AAFD7D600FF0D5E /* PexelRepository.swift in Sources */,
@@ -505,6 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Test/Preview Content\"";
+				DEVELOPMENT_TEAM = 53423PLJH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -512,6 +517,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -533,6 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Test/Preview Content\"";
+				DEVELOPMENT_TEAM = 53423PLJH4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -540,6 +547,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
