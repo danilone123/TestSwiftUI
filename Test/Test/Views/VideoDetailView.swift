@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVKit
+import CoreData
 
 struct VideoDetailView: View {
     let video: Video
@@ -37,9 +38,9 @@ struct VideoDetailView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundColor(networkMonitor.isConnected ? .white : .red)
-                
+
                 Spacer()
-                
+
                 HStack(spacing: 40) {
                     InfoView(title: "Duration", value: "\(video.duration) sec")
                     InfoView(title: "Quality", value: video.quality ?? "")
@@ -61,7 +62,8 @@ struct VideoDetailView: View {
 
 struct VideoDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoDetailView(video: Video(), isShowingDetail: .constant(true))
+        let previewVideo = PreviewVideo()
+        VideoDetailView(video: previewVideo.video, isShowingDetail: .constant(true)).environmentObject(NetworkMonitor())
     }
 }
 

@@ -26,6 +26,7 @@
 		308987FB2AAFD9AC00FF0D5E /* PError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987FA2AAFD9AC00FF0D5E /* PError.swift */; };
 		308987FD2AB0C5DE00FF0D5E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987FC2AB0C5DE00FF0D5E /* NetworkMonitor.swift */; };
 		308987FF2AB0EEF300FF0D5E /* DismissButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308987FE2AB0EEF300FF0D5E /* DismissButtonView.swift */; };
+		30A716A42AB3F74B0062BAD4 /* PreviewVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A716A32AB3F74B0062BAD4 /* PreviewVideo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		308987FA2AAFD9AC00FF0D5E /* PError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PError.swift; sourceTree = "<group>"; };
 		308987FC2AB0C5DE00FF0D5E /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		308987FE2AB0EEF300FF0D5E /* DismissButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButtonView.swift; sourceTree = "<group>"; };
+		30A716A32AB3F74B0062BAD4 /* PreviewVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVideo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		305C11C22AAAC31900169D83 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				30A716A22AB3F72C0062BAD4 /* Preview */,
 				308987F92AAFD99E00FF0D5E /* Common */,
 				308987ED2AACC99200FF0D5E /* Views */,
 				305C11FB2AABED0600169D83 /* Persistence */,
@@ -209,6 +212,14 @@
 				308987FA2AAFD9AC00FF0D5E /* PError.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		30A716A22AB3F72C0062BAD4 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				30A716A32AB3F74B0062BAD4 /* PreviewVideo.swift */,
+			);
+			path = Preview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +356,7 @@
 				308987FD2AB0C5DE00FF0D5E /* NetworkMonitor.swift in Sources */,
 				305C11FA2AABE6DA00169D83 /* VideoCellView.swift in Sources */,
 				305C11F12AAB683800169D83 /* PexelVideos.swift in Sources */,
+				30A716A42AB3F74B0062BAD4 /* PreviewVideo.swift in Sources */,
 				308987F82AAFD7D600FF0D5E /* PexelRepository.swift in Sources */,
 				305C11EE2AAAE00000169D83 /* NetworkingManager.swift in Sources */,
 				305C11C62AAAC31900169D83 /* VideosListView.swift in Sources */,
